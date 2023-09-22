@@ -3,6 +3,7 @@ package com.shopist.step_definitions;
 import com.shopist.utilities.CommonSteps;
 import com.shopist.utilities.ConfigurationReader;
 import com.shopist.utilities.Driver;
+import com.shopist.utilities.Log;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -17,8 +18,10 @@ public class myProfile  extends CommonSteps {
     @Given("the user goes to URL")
 
     public void the_user_goes_to_url() {
-       //driver.get(ConfigurationReader.get("url"));
-        driver.get(ConfigurationReader.get("url1"));
+        String url= ConfigurationReader.get("url");
+        driver.get(url);
+        Log.info("Navigated to "+url);
+        waitFor(2);
     }
     @Then("the user sees Coach Cache")
     public void the_user_sees_coach_cache() {
