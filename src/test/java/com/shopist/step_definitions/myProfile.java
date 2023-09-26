@@ -3,11 +3,12 @@ package com.shopist.step_definitions;
 import com.shopist.utilities.CommonSteps;
 import com.shopist.utilities.ConfigurationReader;
 import com.shopist.utilities.Driver;
-import com.shopist.utilities.Log;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
+
+import static org.junit.Assert.assertEquals;
 
 
 public class myProfile  extends CommonSteps {
@@ -18,29 +19,33 @@ public class myProfile  extends CommonSteps {
     @Given("the user goes to URL")
 
     public void the_user_goes_to_url() {
-        String url= ConfigurationReader.get("url");
-        driver.get(url);
-        Log.info("Navigated to "+url);
-        waitFor(2);
+       //driver.get(ConfigurationReader.get("url"));
+        driver.get(ConfigurationReader.get("url"));
     }
     @Then("the user sees Coach Cache")
     public void the_user_sees_coach_cache() {
-       
+
+       // assertEquals("", "CDL | CDL - Innovate and Deliver";
     }
+
 
 
    
     @When("the user clicks the My Profile Buton")
     public void the_user_clicks_the_my_profile_buton() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        myProfilePages.myProfile.click();
+
     }
    
 
         @When("the user sees the new url profile")
     public void the_user_sees_the_new_url_profile() {
-        
-    }
+            waitForPageToLoad(5);
+            String currentUrl = driver.getCurrentUrl();
+            waitForPageToLoad(10);
+            System.out.println(currentUrl);
+
+        }
 
 
     @Then("the user sees the Edit Profile buton")
