@@ -6,9 +6,6 @@ import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.*;
-import org.sikuli.script.FindFailed;
-import org.sikuli.script.Pattern;
-import org.sikuli.script.Screen;
 
 
 import java.io.File;
@@ -659,48 +656,48 @@ public class CommonSteps extends PageInitializer {
 
 
     }
-
-    public static void clickOnImage(String imageName) {
-        String userDir = System.getProperty("user.dir");
-        String imageAddress = userDir + "\\src\\test\\resources\\sikuliImages\\" + imageName + ".png";
-        Screen screen = new Screen();
-        Pattern pattern = new Pattern(imageAddress);
-        try {
-            screen.wait(pattern, 5000);
-            screen.click(pattern);
-        } catch (FindFailed e) {
-            e.printStackTrace();
-        }
-    }
-
-    public static void sendKeysOnImage(String imageName, String text) {
-        String userDir = System.getProperty("user.dir");
-        String imageAddress = userDir + "\\src\\test\\resources\\sikuliImages\\" + imageName + ".png";
-        Screen screen = new Screen();
-        Pattern pattern = new Pattern(imageAddress);
-        try {
-            screen.wait(pattern, 5000);
-            screen.type(text);
-        } catch (FindFailed e) {
-            e.printStackTrace();
-        }
-    }
-    public static boolean isImageAvailable(String imageName) {
-        String userDir = System.getProperty("user.dir");
-        String imageAddress = userDir + "\\src\\test\\resources\\sikuliImages\\" + imageName + ".png";
-        Screen screen = new Screen();
-        Pattern pattern = new Pattern(imageAddress);
-        try {
-            if (screen.exists(pattern) != null) {
-                return true;
-            }
-            else {
-                return false;
-            }
-        } catch (Exception e) {
-            System.out.println("Image not found");
-            return false;
-        }
-    }
+//
+//    public static void clickOnImage(String imageName) {
+//        String userDir = System.getProperty("user.dir");
+//        String imageAddress = userDir + "\\src\\test\\resources\\sikuliImages\\" + imageName + ".png";
+//        Screen screen = new Screen();
+//        Pattern pattern = new Pattern(imageAddress);
+//        try {
+//            screen.wait(pattern, 5000);
+//            screen.click(pattern);
+//        } catch (FindFailed e) {
+//            e.printStackTrace();
+//        }
+//    }
+//
+//    public static void sendKeysOnImage(String imageName, String text) {
+//        String userDir = System.getProperty("user.dir");
+//        String imageAddress = userDir + "\\src\\test\\resources\\sikuliImages\\" + imageName + ".png";
+//        Screen screen = new Screen();
+//        Pattern pattern = new Pattern(imageAddress);
+//        try {
+//            screen.wait(pattern, 5000);
+//            screen.type(text);
+//        } catch (FindFailed e) {
+//            e.printStackTrace();
+//        }
+//    }
+//    public static boolean isImageAvailable(String imageName) {
+//        String userDir = System.getProperty("user.dir");
+//        String imageAddress = userDir + "\\src\\test\\resources\\sikuliImages\\" + imageName + ".png";
+//        Screen screen = new Screen();
+//        Pattern pattern = new Pattern(imageAddress);
+//        try {
+//            if (screen.exists(pattern) != null) {
+//                return true;
+//            }
+//            else {
+//                return false;
+//            }
+//        } catch (Exception e) {
+//            System.out.println("Image not found");
+//            return false;
+//        }
+//    }
 
 }
