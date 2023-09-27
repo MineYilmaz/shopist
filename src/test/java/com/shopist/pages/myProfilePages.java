@@ -20,5 +20,5 @@ public class myProfilePages extends CommonPageElements{
     @FindBy(xpath = "//*[text()='Edit your rofile']")
     public WebElement editYourProfile;
 
-
+//
 }

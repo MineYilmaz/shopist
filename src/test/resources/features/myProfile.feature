@@ -28,12 +28,12 @@ Scenario:
   When the user clicks the My Profile Buton
   And the user sees the new url profile
 
-# Scenario:
-#   Given the user goes to URL
-#   Then the user sees Coach Cache
-#   Then the user sees My Profile Title
-#   When the user clicks the My Profile Buton
-#   And the user sees the new url profile
+ Scenario:
+   Given the user goes to URL
+   Then the user sees Coach Cache
+ Then the user sees My Profile Title
+ When the user clicks the My Profile Buton
+  And the user sees the new url profile
 
 # Scenario:
 #   Given the user goes to URL

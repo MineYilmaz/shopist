@@ -53,7 +53,7 @@ public class myProfile  extends CommonSteps {
             Duration timeout = Duration.ofSeconds(10);
             System.out.println(currentUrl);
 
-
+//
            /*
            String expectedUrl ="http://practice.cybertekschool.com/email_sent";
 
