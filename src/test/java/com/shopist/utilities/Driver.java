@@ -19,7 +19,7 @@ import java.util.concurrent.TimeUnit;
 public class Driver {
 
     public static WebDriver driver;
-    public static Actions actions = new Actions(driver);
+    public static Actions actions;
 
     /*
      * This method will create a driver and return it
@@ -60,6 +60,7 @@ public class Driver {
         }
             driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
             driver.manage().window().maximize();
+            actions = new Actions(driver);
        //     driver.get(ConfigurationReader.get("url"));
             PageInitializer.initialize();
             return driver;
