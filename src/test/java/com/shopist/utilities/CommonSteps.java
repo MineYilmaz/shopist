@@ -4,6 +4,7 @@ import com.shopist.pages.PageInitializer;
 import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
 import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.*;
 
@@ -13,6 +14,7 @@ import java.io.IOException;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -699,5 +701,24 @@ public class CommonSteps extends PageInitializer {
 //            return false;
 //        }
 //    }
+
+
+    /*static WebDriver driver = new ChromeDriver();
+
+    // Navigate to a website
+        driver.get("http://example.com");
+
+    // Create a WebDriverWait object, specifying a timeout duration
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+    // Wait until a certain condition is met (in this case, an element becomes visible)
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("element_id")));
+
+    // Continue with your code
+    // ...
+
+    // Don't forget to close the driver
+        driver.quit();*/
+
 
 }
