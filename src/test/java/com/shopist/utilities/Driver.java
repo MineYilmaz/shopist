@@ -10,6 +10,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.safari.SafariDriver;
 
 
@@ -18,6 +19,7 @@ import java.util.concurrent.TimeUnit;
 public class Driver {
 
     public static WebDriver driver;
+    public static Actions actions = new Actions(driver);
 
     /*
      * This method will create a driver and return it
