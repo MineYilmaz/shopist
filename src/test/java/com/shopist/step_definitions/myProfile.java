@@ -9,6 +9,8 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
+import java.time.Duration;
+
 import static org.junit.Assert.assertEquals;
 
 
@@ -46,10 +48,9 @@ public class myProfile  extends CommonSteps {
             driver.get(ConfigurationReader.get("url"));
             myProfilePages.myProfile.click();
 
-            waitForPageToLoad(10);
             String currentUrl = driver.getCurrentUrl();
 
-            waitForPageToLoad(20);
+            Duration timeout = Duration.ofSeconds(10);
             System.out.println(currentUrl);
 
 
